@@ -66,7 +66,7 @@ const HandleDelete = (id) => {
     <div
       style={{
         display: "flex",
-
+//hej
         flexDirection: "column",
       }}
     >
