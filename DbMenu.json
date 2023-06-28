@@ -1,0 +1,123 @@
+{
+  "menu": [
+    {
+      "id": 1,
+      "name": "Triple Cheese",
+      "price": 89,
+      "description": "Vår klassiker gånger tre. 100% grillat nötkött, ost, ketchup, gurka, senap och bröd.",
+      "image": "./images/menu/burger-1.png"
+    },
+    {
+      "id": 2,
+      "name": "Black-burger",
+      "price": 89,
+      "description": "Vår klassiker gånger tre. 100% grillat nötkött, ost, ketchup, gurka, senap och bröd.",
+      "image": "./images/menu/burger-2.png"
+    },
+    {
+      "id": 3,
+      "name": "Bun Special",
+      "price": 89,
+      "description": "Vår klassiker gånger tre. 100% grillat nötkött, ost, ketchup, gurka, senap och bröd.",
+      "image": "./images/menu/burger-3.png"
+    },
+    {
+      "id": 4,
+      "name": "Double burger",
+      "price": 98,
+      "description": "En gammal favorit, nu bättre än någonsin med hela 300g saftigt grillat nötkött, krämig majonnäs och smakrik BBQ-sås. Toppat med krispig sallad, smält ost, bacon och rostad lök.",
+      "image": "./images/menu/burger-4.png"
+    },
+    {
+      "id": 5,
+      "name": "Double Gourmet",
+      "price": 98,
+      "description": "Hela 300g grillat nötkött. Missa inte vår sommarnyhet Gourmet Grill Garlic, med ost, bacon, picklad rödlök, frisésallad och krämig vitlöksdressing.",
+      "image": "./images/menu/burger-5.png"
+    },
+    {
+      "id": 6,
+      "name": "Chicken Royale",
+      "price": 89,
+      "description": "En extra lång burgare med saftig, panerad kycklingfilé, färsk sallad och majonnäs.",
+      "image": "./images/menu/burger-6.png"
+    },
+    {
+      "id": 7,
+      "name": "Gourmet Steak",
+      "price": 98,
+      "description": "En gammal favorit, nu bättre än någonsin. Njut av 150g saftigt grillat nötkött, krämig majonnäs och smakrik BBQ-sås. Toppat med krispig sallad, smält ost, bacon och rostad lök.",
+      "image": "./images/menu/burger-7.png"
+    },
+    {
+      "id": 8,
+      "name": "Flexi Whopper",
+      "price": 69,
+      "description": "Precis som en Whopper, men med en bas av växter! Krämig vegansk majonnäs, ketchup, sallad, tomat, saltgurka och lök.",
+      "image": "./images/menu/burger-8.png"
+    },
+    {
+      "id": 9,
+      "name": "Double Texas",
+      "price": 79,
+      "description": "BBQ dubbelt upp, hela 226g grillat nötkött med rökig BBQ sås, krispiga lökringar, ost, bacon och majonnäs.",
+      "image": "./images/menu/burger-9.png"
+    },
+    {
+      "id": 10,
+      "name": "Fries",
+      "price": 39,
+      "description": "Tjockt skurna, krispiga, gyllenbruna pommes frites. Perfekt till din burgare eller med bara ketchup.",
+      "image": "./images/menu/fries-1.png"
+    },
+    {
+      "id": 11,
+      "name": "Sweet Fries",
+      "price": 45,
+      "description": "Tjockt skurna, krispiga, gyllenbruna sötpotatis pommes frites.",
+      "image": "./images/menu/fries-2.png"
+    },
+    {
+      "id": 12,
+      "name": "Choco Milkshake",
+      "price": 59,
+      "description": "Medium Milkshake Choklad",
+      "image": "./images/menu/milkshake-1.png"
+    },
+    {
+      "id": 13,
+      "name": "Läsk: Passionsfrukt",
+      "price": 29,
+      "description": "Läsk med smak av passionsfrukt",
+      "image": "./images/menu/soda-1.png"
+    },
+    {
+      "id": 14,
+      "name": "Läsk: Jordgubbe",
+      "price": 29,
+      "description": "Läsk med smak av jordgubbe",
+      "image": "./images/menu/soda-2.png"
+    },
+    {
+      "id": 15,
+      "name": "Sparkling Water",
+      "price": 20,
+      "description": "Bubvelvatten",
+      "image": "./images/menu/soda-3.png"
+    },
+    {
+      "id": 16,
+      "name": "Läsk: Tropical ",
+      "price": 20,
+      "description": "Läsk med smak av kokos och lime.",
+      "image": "./images/menu/soda-4.png"
+    }
+  ],
+  "Cart": [
+    {
+      "Name": "Black-burger",
+      "Price": 89,
+      "id": 2
+    }
+  ]
+}
