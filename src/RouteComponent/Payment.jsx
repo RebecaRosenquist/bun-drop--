@@ -1,7 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
 
-
 import swish from "../Swish-logo.jpg";
 import visa from "../mastercard.webp";
 
@@ -21,8 +20,6 @@ function Payment() {
     Adress: "",
   });
 
-  
-
   const handleForm = (event) => {
     const { name, value } = event.target;
 
@@ -35,13 +32,9 @@ function Payment() {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.table(formData);
-  
-   window.location.href = "/confirmation";
-  }
 
- 
-  
-  
+    window.location.href = "/confirmation";
+  };
 
   function handlePay1() {
     setSwish(true);
@@ -51,8 +44,6 @@ function Payment() {
   function handlePay2() {
     setCard(true);
     setSwish(false);
-
-     
   }
 
   return (
@@ -121,7 +112,7 @@ function Payment() {
                 style={{ backgroundColor: "#D9D9D9" }}
               >
                 {isSwish === true ? (
-                  <div  style={{ backgroundColor: "transparent" }}>
+                  <div style={{ backgroundColor: "transparent" }}>
                     <img
                       onClick={handlePay1}
                       namn="swish"
@@ -133,7 +124,7 @@ function Payment() {
                         height: "60px",
                         width: "60px",
                         cursor: "pointer",
-                        border: "green solid 5px",
+                        border: "green solid 3px",
                       }}
                     />
                     <img
@@ -151,7 +142,7 @@ function Payment() {
                     />
                   </div>
                 ) : (
-                  <div  style={{ backgroundColor: "transparent" }}>
+                  <div style={{ backgroundColor: "transparent" }}>
                     <img
                       onClick={handlePay1}
                       namn="swish"
@@ -176,12 +167,11 @@ function Payment() {
                         height: "60px",
                         width: "60px",
                         cursor: "pointer",
-                        border: "green solid 5px",
+                        border: "green solid 3px",
                       }}
                     />
                   </div>
                 )}
-                
               </div>
               <div
                 className="InputBoxes"
@@ -200,7 +190,10 @@ function Payment() {
                     ></input>
                   </div>
                 ) : isCard === true ? (
-                  <div className="pay" style={{backgroundColor: "transparent"}}>
+                  <div
+                    className="pay"
+                    style={{ backgroundColor: "transparent" }}
+                  >
                     <input
                       className="InputBox"
                       placeholder="Card Number"
@@ -216,11 +209,9 @@ function Payment() {
                   <div>choose pay</div>
                 )}
 
-                
                 <button className="PayButton" type="submit">
                   Place order
                 </button>
-               
               </div>
             </div>
           </div>
@@ -229,6 +220,5 @@ function Payment() {
     </form>
   );
 }
-  
+
 export default Payment;
-  

@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 import "./cart.css";
 
 function Cart() {
-  
   let [getOrder, setOrder] = useState([]);
   let [isOrderEmpty, setOrderEmpty] = useState(true);
   let [totalPrice, setTotalPrice] = useState(0);
@@ -21,8 +20,6 @@ function Cart() {
     } else {
       setOrderEmpty(true);
     }
-
-    
   });
 
   const testa = getOrder.reduce((total, { price }) => {
@@ -31,11 +28,8 @@ function Cart() {
 
   function DeleteButton(props) {
     let findId = props.target.id;
-
-    
   }
   const HandleDelete = (id) => {
-    
     fetch(`http://localhost:2000/cart/${id}`, {
       method: "DELETE",
     }).then(() => {
@@ -54,7 +48,7 @@ function Cart() {
       {!isOrderEmpty ? (
         <div className="MainCartContainer">
           <div className="testCart">
-            <h1 style={{ backgroundColor: "#292929" }}>Shopping Cart</h1>
+            <h1 style={{ backgroundColor: "#292929" }}>ShoppingCart</h1>
             <div className="AddedItemContainer">
               <h2 id="your-order">Your order</h2>
               <hr />
@@ -92,7 +86,7 @@ function Cart() {
       ) : (
         <div className="MainCartContainer">
           <div className="testCart">
-            <h1 style={{ backgroundColor: "#292929" }}>Shopping Cart</h1>
+            <h1 style={{ backgroundColor: "#292929" }}>ShoppingCart</h1>
             <div className="AddedItemContainer">
               <div className="OneItem">
                 <div

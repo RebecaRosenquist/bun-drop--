@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+# Bun-Drop
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Detta är en app med fokus på gränssnitt. Det är en webbshop där användaren ska kunna göra en önskad beställning genom varukorg -> checkout -> bekräftelse
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Visa en meny ifrån produkter kopplat till json-servern
+- Lägga till och ta bort varor i varukorgen
+- Gå till checkout och fylla i leveransadress, välja betalmetod och fylla i denna.
+- Få en bekräftelse på att ordern är lagt samt beräknad leveranstid 
 
-### `npm start`
+## Starta appen
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### `npm run menu-db`
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Kopplar upp json-servern med databaserna:
 
-### `npm test`
+menu: Här ligger alla varor som finns i webbshopen
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Cart: Här regleras varukorgen om man lägger till en vara eller tar bort den.
 
-### `npm run build`
+### `npm run start`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Startar appen i webbläsaren
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### http://localhost:3000
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Designen ifrån figma:
 
-### `npm run eject`
+OBS (Note till Albin): Appen är byggd på en bred skärm och kommer därför inte se densamma ut på tex en laptop. På skärmen jag byggt appen på ser designen densamma ut som i Figma (tex 4 hamburgare i bredd i meny-vyn). När jag kopplade ur skärmarna så märkte jag att designen förändrades en hel del på min laptop, tex att bara två hamburgare fick plats i bredd.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Skärm arbetet utgått ifrån: HP M24f FHD-bildskärm 23,8 tum
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+https://www.figma.com/file/TBkiEcML8utqMlbuUgo9jd/Bun-drop?type=design&node-id=0-1&mode=design&t=qrZLovWm6X1Gz5Z5-0
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

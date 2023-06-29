@@ -115,9 +115,19 @@
   ],
   "Cart": [
     {
-      "Name": "Double burger",
-      "Price": 98,
+      "Name": "Bun Special",
+      "Price": 89,
       "id": 1
+    },
+    {
+      "Name": "Black-burger",
+      "Price": 89,
+      "id": 2
+    },
+    {
+      "Name": "Black-burger",
+      "Price": 89,
+      "id": 3
     }
   ]
 }
