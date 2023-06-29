@@ -71,22 +71,33 @@ function Cart() {
           <div className="testCart">
             <h1 style={{ backgroundColor: "#292929" }}>ShoppingCart</h1>
             <div className="AddedItemContainer">
+              <h2 id="your-order" >Your order</h2>
+              <hr />
               {getOrder.map((o) => (
-                <div className="OneItem">
-                  <div style={{ backgroundColor: "#D9D9D9" }}>
-                    <h2>{o.Name}</h2>
-                    <h4 style={{ backgroundColor: "#D9D9D9" }}>{o.Price}</h4>
+                <div className="row" style={{ backgroundColor: "#D9D9D9" }}>
+                  <div className="OneItem">
+                    <button
+                      className="DeleteButton"
+                      onClick={() => HandleDelete(o.id)}
+                    >
+                      x
+                    </button>
+                    <div
+                      className="AddItem"
+                      style={{ backgroundColor: "#D9D9D9" }}
+                    >
+                      <h2 id="h22">{o.Name}</h2>
+                      <h4 id="h44" style={{ backgroundColor: "#D9D9D9" }}>
+                        {o.Price} SEK
+                      </h4>
+                    </div>
                   </div>
-                  <button
-                    className="DeleteButton"
-                    onClick={() => HandleDelete(o.id)}
-                  >
-                    x
-                  </button>
+                  <div style={{ backgroundColor: "#D9D9D9" }}>
+                    <hr id="hr-item" />
+                  </div>
                 </div>
               ))}
               <h3 style={{ backgroundColor: "#D9D9D9" }}>Total: {testa} SEK</h3>
-              <hr />
             </div>
             <Link style={{ backgroundColor: "transparent" }} to={"/payment"}>
               <button className="PayButton">Pay</button>
@@ -99,8 +110,8 @@ function Cart() {
             <h1 style={{ backgroundColor: "#292929" }}>ShoppingCart</h1>
             <div className="AddedItemContainer">
               <div className="OneItem">
-                <div style={{ backgroundColor: "#D9D9D9" }}>
-                  <h2>Cart is empty</h2>
+                <div className="cart-empty-div" style={{ backgroundColor: "#D9D9D9" }}>
+                  <h2 id="cart-is-empty">Cart is empty</h2>
                 </div>
               </div>
               <hr />

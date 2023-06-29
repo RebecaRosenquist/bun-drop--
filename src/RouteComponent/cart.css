@@ -44,23 +44,54 @@
 
 .OneItem{
     display: flex;
-   
+   justify-content: flex-start;
+   align-items: flex-start;
    width: 500px;
    background-color: #D9D9D9;
 }
 
 .DeleteButton {
-    height: 30px;
-    width: 30px;
-    margin-left: 180px;
+    height: 20px;
+    width: 20px;
+    margin-left: 10px;
+    margin-right: 20px;
+    margin-top: 5px;
     border-radius: 5px;
-    background-color: brown
+    background-color: brown;
+    display: flex;
+    justify-content: center;
+    
+    color: #D9D9D9;
+
 }
 
+.cart-empty-div{
+    width: 500px;
+}
+
+#cart-is-empty{
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+#your-order{
+    margin-bottom: 20px;
+    font-size: 23px;
+    font-weight: bold;
+}
+.row{
+    display: grid;
+}
 hr {
     width: 500px;
     margin-top: 0px;
     margin-bottom: 15px;
+}
+
+#hr-item{
+    color: lightgray;
 }
 
 .PayButton{
@@ -76,17 +107,26 @@ hr {
     
  
 }
+.AddItem{
+    
+  
+    gap: 70px  ;
+    
+}
 
 h2, h4 {
     color: #292929;
+  
 }
 
 h2{
-    font-size: 20px;
+    font-size: 20px;  
+    font-weight: lighter;
 }
 
 h4{
     font-weight:normal;
+    font-size: 15px;
 }
 
 h3{
@@ -97,3 +137,15 @@ h3{
     
     
 }
+
+#h44{
+    margin-left: 10px;
+    font-style: italic;
+    
+    
+}
+
+#h22{
+    font-style: italic;
+}
+
