@@ -71,7 +71,7 @@ function Cart() {
           <div className="testCart">
             <h1 style={{ backgroundColor: "#292929" }}>ShoppingCart</h1>
             <div className="AddedItemContainer">
-              <h2 id="your-order" >Your order</h2>
+              <h2 id="your-order">Your order</h2>
               <hr />
               {getOrder.map((o) => (
                 <div className="row" style={{ backgroundColor: "#D9D9D9" }}>
@@ -100,7 +100,7 @@ function Cart() {
               <h3 style={{ backgroundColor: "#D9D9D9" }}>Total: {testa} SEK</h3>
             </div>
             <Link style={{ backgroundColor: "transparent" }} to={"/payment"}>
-              <button className="PayButton">Pay</button>
+              <button className="PayButton">Continue to delivery</button>
             </Link>
           </div>
         </div>
@@ -110,7 +110,10 @@ function Cart() {
             <h1 style={{ backgroundColor: "#292929" }}>ShoppingCart</h1>
             <div className="AddedItemContainer">
               <div className="OneItem">
-                <div className="cart-empty-div" style={{ backgroundColor: "#D9D9D9" }}>
+                <div
+                  className="cart-empty-div"
+                  style={{ backgroundColor: "#D9D9D9" }}
+                >
                   <h2 id="cart-is-empty">Cart is empty</h2>
                 </div>
               </div>

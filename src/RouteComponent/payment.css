@@ -81,7 +81,7 @@ hr {
 
 .PayButton{
     height: 50px;
-    width: 120px;
+    width: 140px;
     margin-top: 10px;
     margin-bottom: 50px;
     border-radius: 15px;
@@ -91,6 +91,11 @@ hr {
     
     
  
+}
+
+#hh{
+    font-weight:normal;
+    margin-top: 5px;
 }
 
 h2, h4 {

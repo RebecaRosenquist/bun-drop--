@@ -4,6 +4,9 @@ import { useState, useEffect } from "react";
 import swish from "../Swish-logo.jpg";
 import visa from "../mastercard.webp";
 
+import { Link } from "react-router-dom";
+
+
 //Css import
 import "./payment.css";
 
@@ -21,6 +24,7 @@ function Payment() {
           <h1 style={{ backgroundColor: "#292929" }}>Checkout</h1>
           <div className="AddDileveryInfo">
             <h2>Delivery</h2>
+            <hr ></hr>
             <div className="Info">
               <div
                 className="InputBoxes"
@@ -32,14 +36,17 @@ function Payment() {
                 <input className="InputBox" placeholder="Phone Number"></input>
               </div>
             </div>
-            <hr />
-            <div className="OneItem">
-              <div style={{ backgroundColor: "#D9D9D9" }}>
-                <h2>Payment</h2>
-              </div>
+            
+            <div style={{ backgroundColor: "#D9D9D9" }}>
+              <h2>Payment</h2>
             </div>
+            <hr />
+            <div className="OneItem"></div>
 
-            <div className="Payment-icons-div" style={{ backgroundColor: "#D9D9D9" }}>
+            <div
+              className="Payment-icons-div"
+              style={{ backgroundColor: "#D9D9D9" }}
+            >
               <img
                 id="img-pay"
                 className="swish-icon"
@@ -54,22 +61,15 @@ function Payment() {
                 alt="mastercard"
                 style={{ height: "60px", width: "60px" }}
               />
-              </div>
-              <div
-                className="InputBoxes"
-                style={{ backgroundColor: "#D9D9D9" }}
-              >
-                <input className="InputBox" placeholder="Card Number"></input>
-                <input className="InputBox" placeholder="CVV"></input>
-                
-                
-              </div>
-            
-
-            <hr />
-            <h3 style={{ backgroundColor: "#D9D9D9" }}>Total: 20 SEK</h3>
+            </div>
+            <div className="InputBoxes" style={{ backgroundColor: "#D9D9D9", marginBottom: "0px" }}>
+              <input className="InputBox" placeholder="Card Number"></input>
+              <input className="InputBox" placeholder="CVV"></input>
+            </div>
           </div>
-          <button className="PayButton">Complete Order</button>
+          <Link style={{ backgroundColor: "transparent" }} to={"/confirmation"}>
+            <button className="PayButton">Place order</button>
+          </Link>
         </div>
       </div>
     </div>

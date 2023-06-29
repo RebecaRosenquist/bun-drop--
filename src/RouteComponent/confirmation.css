@@ -4,7 +4,7 @@
   align-items: center;
 }
 
-.MainPaymentContainers {
+.MainConfirmationContainers {
   width: 1500px;
   padding: 400px;
   padding-top: 10px;
@@ -15,7 +15,7 @@
   width: 100vh;
 }
 
-.AddDileveryInfos {
+.AddDileveryInfo {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -27,7 +27,7 @@
   box-shadow: 10px 10px 5px black;
 }
 
-.testPayments {
+.testConfirmation {
   background-color: #292929;
   color: white;
   display: flex;
@@ -39,8 +39,14 @@
 #hh {
   font-size: 25px;
   margin-bottom: 20px;
+  font-weight: bold;
 }
 
 #hhh {
   font-size: 18px;
+  font-weight: lighter;
+}
+
+#hg{
+    font-size: 80px;
 }
