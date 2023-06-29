@@ -32,7 +32,7 @@ function Cart() {
   }, 0);
 
   function DeleteButton(props) {
-    let findId = props.target.id
+    let findId = props.target.id;
 
     // fetch(`http://localhost:2000/Cart/${findId}`, {
     //   method: "DELETE",
@@ -46,27 +46,23 @@ function Cart() {
     //   .catch((error) => {
     //     console.error("Error:", error);
     //   });
-   
-    
-
   }
-const HandleDelete = (id) => {
-      //Hämta från databasen med rätt id och utför method!
-      // Sen!(then) uppdatera nuvarande lista med ny lista(då datan har förändrats)
-      // Detta gör vi för att vi måste ändra både UI och databasen tillsammans, annars t.ex vad som händer är att item blir kvar och man trycker på knappen men inget händer men i själva verka fallet så har du tagit bort item men UI(UserInterface) har ej ändrats
-      fetch(`http://localhost:2000/cart/${id}`, {
-        method: "DELETE",
-      }).then(() => {
-        const updatedData = getOrder.filter((item) => item.id !== id);
-        setOrder(updatedData);
-      });
-    };
+  const HandleDelete = (id) => {
+    //Hämta från databasen med rätt id och utför method!
+    // Sen!(then) uppdatera nuvarande lista med ny lista(då datan har förändrats)
+    // Detta gör vi för att vi måste ändra både UI och databasen tillsammans, annars t.ex vad som händer är att item blir kvar och man trycker på knappen men inget händer men i själva verka fallet så har du tagit bort item men UI(UserInterface) har ej ändrats
+    fetch(`http://localhost:2000/cart/${id}`, {
+      method: "DELETE",
+    }).then(() => {
+      const updatedData = getOrder.filter((item) => item.id !== id);
+      setOrder(updatedData);
+    });
+  };
 
   return (
     <div
       style={{
         display: "flex",
-//hej
         flexDirection: "column",
       }}
     >
@@ -83,7 +79,7 @@ const HandleDelete = (id) => {
                   </div>
                   <button
                     className="DeleteButton"
-                    onClick={()=> HandleDelete (o.id)}
+                    onClick={() => HandleDelete(o.id)}
                   >
                     x
                   </button>
@@ -93,10 +89,8 @@ const HandleDelete = (id) => {
               <hr />
             </div>
             <Link style={{ backgroundColor: "transparent" }} to={"/payment"}>
-            <button className="PayButton">Pay</button>
-
+              <button className="PayButton">Pay</button>
             </Link>
-            
           </div>
         </div>
       ) : (
