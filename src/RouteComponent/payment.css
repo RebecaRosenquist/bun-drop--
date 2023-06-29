@@ -65,6 +65,11 @@
     
 }
 
+.pay{
+    display: grid;
+    gap: 10px;
+}
+
 .DeleteButtonP {
     height: 30px;
     width: 30px;

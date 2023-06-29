@@ -121,7 +121,7 @@ function Payment() {
                 style={{ backgroundColor: "#D9D9D9" }}
               >
                 {isSwish === true ? (
-                  <div style={{ backgroundColor: "transparent" }}>
+                  <div  style={{ backgroundColor: "transparent" }}>
                     <img
                       onClick={handlePay1}
                       namn="swish"
@@ -151,7 +151,7 @@ function Payment() {
                     />
                   </div>
                 ) : (
-                  <div style={{ backgroundColor: "transparent" }}>
+                  <div  style={{ backgroundColor: "transparent" }}>
                     <img
                       onClick={handlePay1}
                       namn="swish"
@@ -181,24 +181,7 @@ function Payment() {
                     />
                   </div>
                 )}
-                {/* <img
-                  onClick={handlePay1}
-                  namn="swish"
-                  id="img-pay"
-                  className="swish-icon"
-                  src={swish}
-                  alt="swish"
-                  style={{ height: "60px", width: "60px", cursor: "pointer" }}
-                />
-                <img
-                  onClick={handlePay2}
-                  namn="card"
-                  id="img-pay"
-                  className="card-icon"
-                  src={visa}
-                  alt="mastercard"
-                  style={{ height: "60px", width: "60px", cursor: "pointer" }}
-                /> */}
+                
               </div>
               <div
                 className="InputBoxes"
@@ -217,7 +200,7 @@ function Payment() {
                     ></input>
                   </div>
                 ) : isCard === true ? (
-                  <div>
+                  <div className="pay" style={{backgroundColor: "transparent"}}>
                     <input
                       className="InputBox"
                       placeholder="Card Number"
@@ -233,14 +216,11 @@ function Payment() {
                   <div>choose pay</div>
                 )}
 
-                {/* <Link
-                    style={{ backgroundColor: "transparent" }}
-                    to={"/confirmation"}
-                    > */}
+                
                 <button className="PayButton" type="submit">
                   Place order
                 </button>
-                {/* </Link> */}
+               
               </div>
             </div>
           </div>
