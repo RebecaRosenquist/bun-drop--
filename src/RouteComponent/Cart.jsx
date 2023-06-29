@@ -100,7 +100,7 @@ function Cart() {
               <h3 style={{ backgroundColor: "#D9D9D9" }}>Total: {testa} SEK</h3>
             </div>
             <Link style={{ backgroundColor: "transparent" }} to={"/payment"}>
-              <button className="PayButton">Continue to delivery</button>
+              <button className="PayButton">Continue to Checkout</button>
             </Link>
           </div>
         </div>
