@@ -115,19 +115,9 @@
   ],
   "Cart": [
     {
-      "Name": "Bun Special",
+      "Name": "Black-burger",
       "Price": 89,
       "id": 1
-    },
-    {
-      "Name": "Black-burger",
-      "Price": 89,
-      "id": 2
-    },
-    {
-      "Name": "Black-burger",
-      "Price": 89,
-      "id": 3
     }
   ]
 }

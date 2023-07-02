@@ -8,23 +8,19 @@ import "./cart.css";
 function Cart() {
   let [getOrder, setOrder] = useState([]);
   let [isOrderEmpty, setOrderEmpty] = useState(true);
-  let [totalPrice, setTotalPrice] = useState(0);
 
   useEffect(() => {
     fetch("http://localhost:2000/Cart")
       .then((res) => res.json())
       .then((data) => setOrder(data));
 
+        
     if (getOrder.length > 0) {
       setOrderEmpty(false);
     } else {
       setOrderEmpty(true);
     }
   });
-
-  const testa = getOrder.reduce((total, { price }) => {
-    return total + price;
-  }, 0);
 
   function DeleteButton(props) {
     let findId = props.target.id;
@@ -76,7 +72,7 @@ function Cart() {
                   </div>
                 </div>
               ))}
-              <h3 style={{ backgroundColor: "#D9D9D9" }}>Total: 259 SEK</h3>
+              {/* <h3 style={{ backgroundColor: "#D9D9D9" }}>Total: 259 SEK</h3> */}
             </div>
             <Link style={{ backgroundColor: "transparent" }} to={"/payment"}>
               <button className="PayButton">Checkout</button>
