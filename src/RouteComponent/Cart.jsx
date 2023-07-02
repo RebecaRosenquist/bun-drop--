@@ -14,7 +14,6 @@ function Cart() {
       .then((res) => res.json())
       .then((data) => setOrder(data));
 
-        
     if (getOrder.length > 0) {
       setOrderEmpty(false);
     } else {
