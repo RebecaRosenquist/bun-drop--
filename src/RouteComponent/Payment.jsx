@@ -9,7 +9,20 @@ import { Link } from "react-router-dom";
 //Css import
 import "./payment.css";
 
+// import dbMenu from "../../DbMenu.json";
+// const dbMenu = require("../../DbMenu.json");
+
+
+
 function Payment() {
+
+  let [getData, setData] = useState([]);
+useEffect(() => {
+  fetch("http://localhost:2000/Cart")
+    .then((res) => res.json())
+    .then((data) => setData(data));
+}, []);
+
   let [isCard, setCard] = useState(false);
   let [isSwish, setSwish] = useState(true);
   let [newList, setNewList] = useState([]);
@@ -19,6 +32,16 @@ function Payment() {
     ZipCode: "",
     Adress: "",
   });
+
+  
+  //Denna fungerarar men listan fylls på igen ifrån cart.jxs
+   function handlePayButton() {
+     // Töm "Cart" i DbMenu.json genom att tilldela en tom array
+     setData([]);
+     // Uppdatera newList med den tömda datan
+     setNewList([]);
+   }
+
 
   const handleForm = (event) => {
     const { name, value } = event.target;
@@ -45,6 +68,10 @@ function Payment() {
     setCard(true);
     setSwish(false);
   }
+
+  
+
+  
 
   return (
     <form onSubmit={handleSubmit}>
@@ -209,7 +236,11 @@ function Payment() {
                   <div>choose pay</div>
                 )}
 
-                <button className="PayButton" type="submit">
+                <button
+                  className="PayButton"
+                  type="submit"
+                  onClick={handlePayButton}
+                >
                   Place order
                 </button>
               </div>

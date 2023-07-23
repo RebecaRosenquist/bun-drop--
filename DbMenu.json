@@ -113,5 +113,21 @@
       "image": "./images/menu/soda-4.png"
     }
   ],
-  "Cart": []
+  "Cart": [
+    {
+      "Name": "Black-burger",
+      "Price": 89,
+      "id": 1
+    },
+    {
+      "Name": "Triple Cheese",
+      "Price": 89,
+      "id": 2
+    },
+    {
+      "Name": "Double burger",
+      "Price": 98,
+      "id": 3
+    }
+  ]
 }
