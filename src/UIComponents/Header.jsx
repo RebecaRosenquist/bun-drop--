@@ -20,7 +20,10 @@ function Header() {
 
   return (
     <div className="header" style={{ backgroundColor: "#DE6E22" }}>
-      <img className="HeaderLogo" src={logo} alt="logo" />
+      
+      <Link to="/" style={{width: "0px"}} >
+        <img className="HeaderLogo" src={logo} alt="logo" />
+      </Link>
 
       <div className="Headerlinkslist" style={{ backgroundColor: "#DE6E22" }}>
         <Link

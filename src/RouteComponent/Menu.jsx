@@ -15,10 +15,11 @@ function Menu() {
       .then((data) => setData(data));
   }, []);
   function AddItem(props) {
-    // alert("Item Added");
-    // <Alert severity="success">
-    // <AlertTitle>Item added to cart</AlertTitle>
-    // </Alert>
+  
+
+    alert('The item has been added to cart!');
+  
+
     let testing = props.target;
     let test = testing.getAttribute("price");
     let convert = parseInt(test);
