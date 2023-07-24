@@ -7,20 +7,26 @@ import "./cart.css";
 
 function Cart() {
   let [getOrder, setOrder] = useState([]);
-  let [isOrderEmpty, setOrderEmpty] = useState(true);
+  let [isOrderEmpty, setOrderEmpty] = useState();
 
   useEffect(() => {
     fetch("http://localhost:2000/Cart")
       .then((res) => res.json())
       .then((data) => setOrder(data));
 
-    if (getOrder.length > 0) {
-      setOrderEmpty(false);
-    } else {
-      setOrderEmpty(true);
-    }
-  });
+  }, []);
 
+   useEffect(() => {
+     test();
+   }, [getOrder]); 
+
+  function test(){
+  if (getOrder.length > 0) {
+        setOrderEmpty(false);
+      } else {
+        setOrderEmpty(true);
+      }
+  }
   function DeleteButton(props) {
     let findId = props.target.id;
   }

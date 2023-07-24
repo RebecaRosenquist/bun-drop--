@@ -12,16 +12,8 @@ import "./payment.css";
 // import dbMenu from "../../DbMenu.json";
 // const dbMenu = require("../../DbMenu.json");
 
-
-
 function Payment() {
-
-  let [getData, setData] = useState([]);
-useEffect(() => {
-  fetch("http://localhost:2000/Cart")
-    .then((res) => res.json())
-    .then((data) => setData(data));
-}, []);
+  //Något här blir fel pga useffect i Cart?
 
   let [isCard, setCard] = useState(false);
   let [isSwish, setSwish] = useState(true);
@@ -32,16 +24,6 @@ useEffect(() => {
     ZipCode: "",
     Adress: "",
   });
-
-  
-  //Denna fungerarar men listan fylls på igen ifrån cart.jxs
-   function handlePayButton() {
-     // Töm "Cart" i DbMenu.json genom att tilldela en tom array
-     setData([]);
-     // Uppdatera newList med den tömda datan
-     setNewList([]);
-   }
-
 
   const handleForm = (event) => {
     const { name, value } = event.target;
@@ -55,8 +37,23 @@ useEffect(() => {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.table(formData);
+    fetch("http://localhost:2000/Cart")
+      .then((res) => res.json())
+      .then((data) => {
+        // rader alla med Id
+        const itemsToDelete = data.filter((item) => item.hasOwnProperty("id"));
 
-    window.location.href = "/confirmation";
+        const deletePromises = itemsToDelete.map((item) => {
+          return fetch(`http://localhost:2000/Cart/${item.id}`, {
+            method: "DELETE",
+          });
+        });
+
+        return Promise.all(deletePromises);
+      })
+      .then(() => {
+        window.location.href = "/confirmation";
+      });
   };
 
   function handlePay1() {
@@ -68,10 +65,6 @@ useEffect(() => {
     setCard(true);
     setSwish(false);
   }
-
-  
-
-  
 
   return (
     <form onSubmit={handleSubmit}>
@@ -239,7 +232,7 @@ useEffect(() => {
                 <button
                   className="PayButton"
                   type="submit"
-                  onClick={handlePayButton}
+                  // onClick={handlePayButton}
                 >
                   Place order
                 </button>

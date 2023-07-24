@@ -16,10 +16,8 @@ function Menu() {
   }, []);
   function AddItem(props) {
   
-
     alert('The item has been added to cart!');
   
-
     let testing = props.target;
     let test = testing.getAttribute("price");
     let convert = parseInt(test);
