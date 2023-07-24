@@ -113,11 +113,5 @@
       "image": "./images/menu/soda-4.png"
     }
   ],
-  "Cart": [
-    {
-      "Name": "Bun Special",
-      "Price": 89,
-      "id": 1
-    }
-  ]
+  "Cart": []
 }
